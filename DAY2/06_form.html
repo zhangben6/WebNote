@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>表单控件只有下载form里才会跟随提交按钮发送到后台</h1>
+    <form action="login.py" method="GET" enctype='' >
+        <p>用户名:<input type="text" name='username' maxlength="10" placeholder="请输入用户名" autocomplete="off"></p>
+        <p>&nbsp;&nbsp;&nbsp;密码:<input type="password" name='upwd' maxlength="8" placeholder="你他妈给我输入密码"></p>
+
+
+        <!-- 单选框和复选框 -->
+        <p>
+            用户性别: 
+                <input id='male' type="radio" name='sex' value='male' checked='checked'> <label for='male'>男</label>
+                <input id='female' type="radio" name='sex' value="female" > <label for='female'>女</label> 
+        </p>
+        <p>
+                用户爱好:
+                <input type="checkbox" name='hobby' value='smoke'> 抽烟
+                <input type="checkbox" name='hobby' value='drink'> 喝酒
+                <input type="checkbox" name='hobby' value='hothair'> 烫头
+                <input type="checkbox" name='hobby' value='tatoo'> 纹身
+        </p>
+        
+
+        <!-- 隐藏属性和文件选择框 -->
+        <input type="hidden" name='uid' value='001'>
+        <p>
+            选择文件:
+                <input type="file" name='uFile'>
+        </p>
+
+
+
+        <!-- 示例下拉菜单 -->
+        <p>用户地址:
+            <select name="address">
+                <option value="BJ">北京</option>
+                <option value="SH">上海</option>
+                <option value="GZ">广州</option>
+                <!-- 属性中添加selected会默认选择该项 -->
+                <option value="SZ" selected>深圳</option> 
+            </select>
+        </p>
+
+        <!-- 多行文本域 -->
+        <p>
+            个人介绍:<br>
+                <textarea name="uinfo" id="" cols="30" rows="10"></textarea>
+        </p>
+
+        
+        <!-- 三种按钮的示例 -->
+        <p>
+            <input type="submit">
+            <input type="reset" >
+            <input type="button" value='普通按钮'>
+        </p>
+        <button>button标签</button>
+    </form>
+
+    <button>button</button>
+</body>
+</html>
