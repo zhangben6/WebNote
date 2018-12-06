@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* h1{
+            width:200px;
+            height:200px;
+            background-color:#ff0;
+            overflow:scroll;
+        } */
+        .box1{  
+            width:200px;
+            height:200px;
+            background-color: pink;
+            /* border:3px dotted red; 设置点线 */
+            border-bottom:3px double red;
+        }
+        
+        /* 三角标制作 */
+        div{
+            width:0;
+            height:0;
+        }
+        .c2{
+            border:20px solid transparent;
+            border-top:20px solid orange;
+        }
+
+        /* body{
+            margin:0;
+        } */
+        #H1{
+            width: 200px;
+            height:100px;
+            border: 5px solid blue;
+
+        }
+        h2{
+            width:200px;
+            height: 100px;
+            outline:red solid 5px;
+        }
+        input:hover{
+            color:orange;
+        }
+        input{
+            outline:none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>默认内容溢出部分仍然可见,影响其他界面元素的显示,默认内容溢出部分仍然可见</h1>
+    <h1>默认内容溢出部分</h1>
+    <p>段落文本</p>
+    <div class="box1">
+    </div>
+    <br>
+
+    <!-- 三角标制作 -->
+    <div class="c2"></div>
+
+    <h1 id='H1'>一级标题</h1>
+    <h2>二级标题</h2>
+    <input type="text" >
+</body>
+</html>
