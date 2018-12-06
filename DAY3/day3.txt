@@ -11,6 +11,7 @@ CSS
             1.文本颜色 color 取颜色值
             2.背景颜色 background-color 取颜色值
             3.字体大小 font-size 取像素值
+            4.text-decoration 取消a标签的下划线
     2.文档内嵌
         语法:使用<style></style>标签引入CSS代码,实现样式与结构的分离
         <style>
