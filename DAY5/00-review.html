@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        /* 首个块元素设置margin-top的时候,调整父元素不会跟着改变的具体措施 */
+        body{
+            /* border-top:1px solid transparent; */
+            padding-top:0.1px;
+         }
+        body,h1{
+            margin:0;
+        }
+        div{
+            width:200px;
+            height:200px;
+            border:5px solid red;
+            margin:50px auto;
+            padding:20px;
+            border-radius:50%;
+        }
+        h1{
+            margin-top:100px;
+        }
+        span{
+            border:5px solid blue;
+            margin:20px;
+            padding:50px;
+        }
+        h2{
+            width:0px;
+            height:0px;
+            border:10px solid transparent;
+            border-top:10px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        盒模型组成:width/height padding border
+    </h1>
+    <span>span</span>
+    <h1>行内元素对盒模型属性部分支持,只支持左右的内外边距,上下的外边距不支持,上下内边距显示效果有问题   </h1>
+    <div>
+        <p>
+            内边距调整内容与边框之间的距离
+        </p>
+    </div>
+    <h2></h2>
+</body>
+</html>
