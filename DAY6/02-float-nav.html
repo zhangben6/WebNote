@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #nav,#main{
+            width:500px;
+            margin:0 auto;
+        }
+        #nav{
+            /* 这个颜色不会显示,会被main的div所覆盖 */
+            background-color: green;
+            /* height:50px; */
+            /* overflow: hidden; */
+        }
+       
+        #main{
+            height:500px;
+            background-color: orange;
+        }
+        #nav a{
+            width:50px;
+            height:50px;
+            /* display还会带有换行产生的边距 */
+            float:left;
+            background-color: red;
+            text-decoration: none;
+            text-align:center;
+            line-height: 50px;
+            margin-right:10px;
+        }
+        #nav .no-margin{
+            margin:0
+        }
+        .clear{
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="">淘宝</a>
+        <a href="">淘宝</a>
+        <a href="">淘宝</a>
+        <a href="">淘宝</a>
+        <a href="">淘宝</a>
+        <a href="" class='no-margin'>淘宝</a>
+        <div class="clear"></div>
+
+    </div>
+    <div id="main"></div>
+</body>
+</html>

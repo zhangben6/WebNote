@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+        }
+        .c1{
+            background-color: red;
+            position: relative;
+            left:100px;
+            top:100px;
+        }
+        .c2{
+            background-color: blue;
+            position:relative;
+        }
+        #box{
+            width:500px;
+            height:500px;
+            background-color: pink;
+            position: relative;
+        }
+        /* .c1,.c2:hover{
+            z-index:1
+        } */
+        .c1:hover{
+            z-index:1
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    <div class="c1"></div>
+    <div class="c2"></div>
+    </div>
+</body>
+</html>
