@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width:100px;
+            height:40px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id='btn'>点击出结果</button><br>
+    <script>
+        num1 = prompt("请输入一个数字")
+        var oBox = document.getElementById('box')
+        var oBtn = document.getElementById('btn')
+        oBtn.onclick = function(){
+            oBox.innerText = num1
+        }
+        document.write('JS中的==意思是比较两边值是否相等,===表示出了比较两边的值,还得比较等号两边的类型')
+    </script>
+</body>
+</html>
