@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./demo.js"></script>
+    <title>Document</title>
+    <style>
+        #box{
+            width:150px;
+            height:50px;
+            border:1px solid red;
+        }
+        #box1{
+         width:200px;
+         height:200px;
+         border:1px solid red;   
+         background-color: red
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='h1'>点我</h1>
+    <button id="btn">按钮</button>
+    <div id="box"></div>
+    <hr>
+    <button id="btn1">按钮</button>
+    <input type="text" id="ipt">
+    <hr>
+    <div id='box1'></div>
+    <button id='btn2'>单击变黄</button>
+    <script>
+        var Ih1 = document.getElementById('h1');
+        Ih1.onclick = function () {
+            alert('卢本伟牛逼');
+            console.log('控制台输出');
+        }
+        oBtn = document.getElementById('btn')
+        oBox = document.getElementById('box')
+        oBtn.onclick = function () {
+            oBox.innerHTML = '<a style="color:red">hello world!!!</a>'
+        }
+        oBtn = document.getElementById('btn1')
+        oIpt = document.getElementById('ipt')
+        oBtn.onclick = function () {
+            // 获取值
+            console.log(oIpt.value)
+            // 设置框中的默值
+            oIpt.value = '螺钉课堂'
+        }
+        var oBox1 = document.getElementById("box1");
+        var oBtn2 = document.getElementById("btn2");
+        oBtn2.onclick = function(){
+            oBox1.style.backgroundColor = 'yellow';
+        }
+    </script>
+</body>
+</html>
