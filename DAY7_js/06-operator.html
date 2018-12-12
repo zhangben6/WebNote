@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s1 = 10 + true;
+        var s2 = '10' / 5;
+        //naN
+        var s3 = '10a' / 5;
+        var s4 = 5 /2 ;
+        console.log(s4)
+        var a = 10;
+        a ++ ;
+        ++ a;
+        console.log(a);
+        var r1 = a ++; //先赋值,后加1
+        console.log(r1,a);
+        var r2 = ++ a;
+        console.log(r2,a);
+        
+        var n = 5;
+        var r = n++ + ++n + n++ + ++n + n;
+        console.log(r,n);
+
+    </script>
+</body>
+</html>

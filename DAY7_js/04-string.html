@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var s1 = 'Aa';
+        console.log('A', s1.charCodeAt(0));
+        console.log('a', s1.charCodeAt(1));
+        var s2 = 'å¼ å¥”';
+        console.log(s2[1],s2.charCodeAt(1));
+        var code = s2.charCodeAt(0);
+        console.log(code)
+        var res = code.toString(16);
+        console.log(res);
+        var a3 = '\u5f20';
+        console.log(a3);
+        console.log('----------------------------')
+        var s4 = '\u9fa5';
+        var s5 = 1000;
+        var s6 = true;
+        console.log(s4,typeof(s4))
+        console.log(s5,typeof s5)
+        console.log(s6,typeof s6)
+
+    </script>
+</body>
+
+</html>

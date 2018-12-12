@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var r1 = 10 + 10;
+        var r2 = '10' + 10;
+        var r3 = 5 + 10 + '10';
+        var r4 = '10' + 5 + 10;
+        var r5 = '10' + true;
+        console.log(r5);
+        var r6 = 10 + true + '10';
+        var r7 = '10' + undefined;
+        console.log(r7) // 10undefined
+        var r8 = '10' + null //10null
+
+        var s1 = 10 + true; //11
+        // var s2 = 10 + undefined; 
+        var s2 = 10 + null;
+        console.log(s2) //naN(NOT A NUMBER)
+        var s4 = true + true;
+        console.log(s4);
+
+        var a = 100;
+        a1 = a.toString();
+        console.log(a1,typeof(a1));
+
+        console.log('***************************');
+
+        var s5 = Number('35.5');
+        var s6 = Number(true);
+        var s7 = Number('18a');
+        console.log(s5);
+        console.log(s6);
+        console.log(s7);
+        
+        console.log('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&');
+        var n1 = parseInt(35.5);
+        console.log(n1);
+        var n2 = parseInt('18.1a');
+        console.log(n2);
+        var n3 = parseInt('a18');
+        console.log(n3);
+
+        var n4 = parseFloat('9.3.5a');
+        console.log(n4); //9.3
+        
+        var n5 = parseFloat('1.5e3');
+        console.log(n5);
+        var n6 = Number('1.5e3');
+        console.log(n6);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
