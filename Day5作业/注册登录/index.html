@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+        #warp{
+            width:1000px;
+            height:540px;
+            border:1px solid blue;
+            margin: 100px auto;
+        }
+        #header{
+            width: 1000px;
+            height:70px;
+            border-bottom:1px solid #999999;
+            line-height: 81px;
+            color:#999999;
+            font-size:20px;
+        }
+        #img{
+            width:500px;
+            height:400px;
+            background: url('./huiyuan.jpg');
+            border:1px solid #DCDCDC;
+            margin-top:38px;
+            float:left;
+        }
+        #tab{
+            width:440px;
+            height:270px;
+            margin-top:80px;
+            /* border:1px solid red; */
+            float:right;
+        }
+        #tab p{
+            font-size:16px;
+            color:#999999;
+        }
+        #ipt{
+            /* border:1px solid red; */
+            margin-left:80px;
+            margin-top:30px;
+        }
+        #ipt span{
+            text-decoration: underline;
+        }
+        #btn{
+            /* border:1px solid red; */
+            margin-left:80px;
+        }
+        #btn1{
+            width:144px;
+            height:40px;
+            background: #64A131;
+            border-radius: 10px;
+            border-style:none;
+            color:#D7F9FF;
+            font-size:20px;
+        }
+        #btn2{
+            width:144px;
+            height:40px;
+            background: #F5FFED;
+            border-radius: 10px;
+            border-style:none;
+            color:#7BAE55;
+            font-size:20px;
+            border-style:solid;
+            border-width:1px;
+            border-color:#64A131;
+        }
+    </style>
+</head>
+<body>
+    <div id="warp">
+        <div id="header">
+            <span>会员登录</span>
+        </div>
+        <div id="content">
+            <div id="img"></div>
+            <div id="tab">
+                <form action="">
+                    <p>手机号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style='width:300px;height:35px' type="text"  autocomplete="off"></p>
+                    <p>&nbsp;密码&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input style='width:300px;height:35px' placeholder="请输入6-20位的密码" type="password"  autocomplete="off"></p>
+                    <div id='ipt'>
+                            <p><input id='male' type="checkbox" name='sex' value='male' checked='checked'> <label for='male'>记住密码</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>忘记密码?</span>&nbsp;<span>快捷登录</span></p>
+                    </div>
+                    <div id="btn">
+                        <input type="submit" value='登录' id='btn1'>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="submit" value='注册会员' id='btn2' border='1px solid blue'>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

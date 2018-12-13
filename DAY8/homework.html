@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
+
+
     <!-- <script>
         //4.打印99乘法表
         for(var x=1;x<10;x++){
@@ -16,6 +18,8 @@
             document.write('</br>')
         }
     </script> -->
+
+
 
 
 
@@ -37,6 +41,10 @@
         }
         
 
+
+
+
+
         打印三角形2
         num = Number(prompt('请输入高度:'))
         for(var x=1;x<num+1;x++){
@@ -54,27 +62,82 @@
 
 
 
-    <!-- <script>
+    <script>
         var num = Number(prompt('请输入一个整数:'))
         var prime_flag = 0
+       
         for(x=2;x<num;x++){
             if(num%2==0){
                 prime_flag = 1
                 break
             }
         }
-        if(prime_flag==1){
-            console.log('不是素数')
+        if(prime_flag){
+            console.log(num+'不是素数')
         }else{
-            console.log('是素数')
+            console.log(num+'是素数')
         }
-    </script> -->
+    </script>
 
 
-    <script>
+
+
+
+
+    <!-- <script>
         //判断星期几
         var s   =  '2018-12-12'; 
         alert("星期 "   +   new Date(s).getDay());
+    </script> -->
+    <script>
+        //接收用户输入
+        var year = Number(prompt('请输入年'))
+        var month = Number(prompt('请输入月'))
+        var day = Number(prompt('请输入日'))
+        var sumDay = 0;
+        // 2.计算距离1990年1月1日间隔的总天数
+        //3.整年的累加
+        for(var i=1990;i<year;i++){
+            sunDay += 365;
+            if(i%400==0 ||(i % 4 == 0 && i % 100 != 0)){
+                sumDay+=1
+            }
+        }
+        // 4.当年整月的累加
+        for(var j=1;j<month-1;j++){
+            switch(j){
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                    sumDay += 31;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    sumDay += 30;
+                    break;
+                case 2:
+                    sumDay += 28
+                    if(i%400==0 ||(i % 4 == 0 && i % 100 != 0)){
+                        sumDay += 1
+                    }
+            }
+
+        }
+        sumDay += day
+        //判断星期[0-6]
+            var week = sumDay % 7;
+            var show = '';
+            switch(week){
+                case 0:
+                    show ....
+            }
+            console.log(year+'年'+month+'月'+day+'日是'+show)
+            
     </script>
 </body>
 </html>

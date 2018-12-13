@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        #header{
+             height:60px;
+             background-color: black;
+
+        }
+        #header-content{
+            width:1100px;
+            /* border:1px solid red; */
+            margin:0 auto;
+        }
+        a{
+            width:48px;
+            height:60px;
+            /* border:1px solid red; */
+            /* 行内元素转块级元素,可以设计宽高 */
+            display: inline-block;
+            color:white;
+            text-decoration: none;
+            text-align: center;
+            line-height:60px; 
+        }
+        #logo{
+            /* 让图片与行内元素对齐 */
+            vertical-align: top;
+            width:200px;
+            height:50px;
+            margin-top:5px;
+        }
+        a:hover{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="header-content">
+            <div id="header-left">
+                <a href="" id='logo'><img src="./logo.png" alt=""></a>
+                <a href="">实战</a>
+                <a href="">课程</a>
+                <a href="">班级</a>
+                <a href="">社区</a>
+                <a href="">博客</a>
+            </div>
+            <div id="header-right"></div>
+        </div>
+    </div>
+</body>
+</html>
