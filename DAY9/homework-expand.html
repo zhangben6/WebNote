@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./calculateDays.js"></script>
+    <title>Document</title>
+    <style>
+        div{
+            padding-top:30px;
+            width:300px;
+            height:300px;
+            /* border:1px solid red; */
+            margin:300px auto;
+        }
+        button{
+            padding:7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        请输入年份:&nbsp;&nbsp;<input type="text" id='ipt1'><br><br>
+        请输入月份:&nbsp;&nbsp;<input type="text" id='ipt2'><br><br>
+        请输入日期:&nbsp;&nbsp;<input type="text" id='ipt3'><br><br>
+        <button id='btn'>打印结果</button><br><br>
+        <textarea name="" id="text" cols="25" rows="2"></textarea>
+    </div>
+
+
+
+    <script>
+        var oIpt1 = document.getElementById('ipt1');
+        var oIpt2 = document.getElementById('ipt2');
+        var oIpt3 = document.getElementById('ipt3');
+        var oBtn = document.getElementById('btn');
+        var oText = document.getElementById('text');
+
+
+        oBtn.onclick = function () {
+            var year = oIpt1.value;
+            var month = oIpt2.value;
+            var day = oIpt3.value;
+            var res = calculate(year, month, day);
+            oText.value = res;
+
+        }
+
+        //封装闰年的函数
+        // function isRun(year){
+        //     var res = 
+        // }
+        function calculate(year, month, day) {
+            var sumDay = 0;
+            //3.整年的累加
+            for (var i = 1990; i < year; i++) {
+                sumDay += 365;
+                if (i % 400 == 0 || (i % 4 == 0 && i % 100 != 0)) {
+                    sumDay += 1;
+                }
+            }
+            // 4.当年整月的累加
+            for (var j = 1; j < month - 1; j++) {
+                switch (j) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                        sumDay += 31;
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        sumDay += 30;
+                        break;
+                    case 2:
+                        sumDay += 28
+                        if (i % 400 == 0 || (i % 4 == 0 && i % 100 != 0)) {
+                            sumDay += 1
+                        }
+                }
+
+            }
+            
+            sumDay += day;
+            //判断星期[0-6]
+            var week = sumDay % 7;
+            var show = '';
+            switch(week){
+                case 0:
+                    show = '周日';
+                case 1:
+                    show = '周一';
+                case 2:
+                    show = '周二';
+                case 3:
+                    show = '周三';
+                case 4:
+                    show = '周四';
+                case 5:
+                    show = '周五';
+                case 6:
+                    show = '周六';
+            }
+            var res = year+'年'+month+'月'+day+'日是'+show;
+            return res;
+            
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <script>
+        var arr1 = new Array() 
+        r = 0
+        do{
+            var res = prompt('请输入数据')
+            if(res!='exit'){
+                arr1[r] = res;
+                console.log(arr1)
+            }
+            r += 1
+        }while(res!='exit')    
+    </script>
+
+
+    <script>
+        var arr = [1,2,'3',true,,17,6,14,32,'zhang']
+        max_data = arr[0]
+        for(var i=1;i<arr.length;i++){
+            if(arr[i] > max_data){
+                max_data = arr[i]
+            }
+        }
+        console.log(max_data)
+    </script> -->
+
+    <!-- <script>
+        var arr = [98,34,45,67,34,23,68,45,75,78];
+        for(var i in arr){
+            var val = arr[i]
+            console.log(val)
+        }
+    </script> -->
+
+
+
+
+
+
+    <script>
+        // 练习3 从小到大输出
+
+        var arr = [98, 34, 45, 67, 34, 23, 68, 45, 75, 78];
+        var max;
+        for (var i = 0; i < arr.length; i++) {
+
+            for (var j = i; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    max=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=max;
+                }
+            }
+
+        }
+        // document.write(arr.toString() + '<br>');
+        document.write(arr);
+        console.log(arr)
+        console.log(arr.toString())
+    </script>
+
+
+
+
+    <!-- <button onclick="func()">来吧</button>
+    <script>
+        function func(){
+            var arr = [98, 34, 45, 67, 34, 23, 68, 45, 75, 78];
+            var input = prompt('请输入一个数')
+            var index = -1
+            for(i=0;i<arr.length;i++){
+                if(arr[i]==input){
+                    index = i
+                    break
+                }
+            }
+            if(index == -1){
+                console.log('没找到')
+            }else{
+                console.log(input + '对应的下标是' + i)
+            }
+    }
+    </script> -->
+
+
+
+</body>
+
+</html>

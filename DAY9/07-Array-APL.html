@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //1.toString() 转换字符串    
+        var arr1 = [1, 2, 3, '6'];
+        console.log(arr1)
+        var r1 = arr1.toString();
+        console.log(r1);
+
+
+        //2.join()
+        var r2 = arr1.join();
+        console.log(r2);
+        var r3 = arr1.join('-');
+        console.log(r3);
+
+
+        //3.reverse
+        var r4 = arr1.reverse();
+        console.log(r4, arr1);
+
+
+        //函数内部reverse 的代码
+        function reverse2() {
+            var arr = [1, 2, 3];
+            var newArr = [];
+            for (var i = length - 1; i >= 0; i--) {
+                newarr[newArr.length] = arr[i];
+            }
+            arr = newArr
+            return arr;
+        }
+        
+
+        //sort()
+        var arr2 = [5,50,7,100]
+        arr2.sort()
+        console.log(arr2)
+        function sortASC(a,b){
+            return a-b;
+        }
+        arr2.sort(sortASC);
+        console.log(arr2)
+        
+        //自定义降序
+        arr2.sort(function (a,b){
+            return b-a
+        })
+        console.log(arr2)
+        
+    </script>
+</body>
+
+</html>

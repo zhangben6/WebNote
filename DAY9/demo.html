@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+         //接收用户输入
+ var year = Number(prompt('请输入年'))
+ var month = Number(prompt('请输入月'))
+ var day = Number(prompt('请输入日'))
+ var sumDay = 0;
+ // 2.计算距离1990年1月1日间隔的总天数
+ //3.整年的累加
+ for(var i=1990;i<year;i++){
+     sumDay += 365;
+     if(i%400==0 ||(i % 4 == 0 && i % 100 != 0)){
+         sumDay+=1
+     }
+ }
+ // 4.当年整月的累加
+ for(var j=1;j<month-1;j++){
+     switch(j){
+         case 1:
+         case 3:
+         case 5:
+         case 7:
+         case 8:
+         case 10:
+             sumDay += 31;
+             break;
+         case 4:
+         case 6:
+         case 9:
+         case 11:
+             sumDay += 30;
+             break;
+         case 2:
+             sumDay += 28
+             if(i%400==0 ||(i % 4 == 0 && i % 100 != 0)){
+                 sumDay += 1
+             }
+     }
+
+ }
+ sumDay += day
+ //判断星期[0-6]
+     var week = sumDay % 7;
+     var show = '';
+     switch(week){
+        case 0:
+        show = '周日';
+    case 1:
+        show = '周一';
+    case 2:
+        show = '周二';
+    case 3:
+        show = '周三';
+    case 4:
+        show = '周四';
+    case 5:
+        show = '周五';
+    case 6:
+        show = '周六';
+     }
+     console.log(year+'年'+month+'月'+day+'日是'+show)    
+    </script>
+</body>
+</html>
