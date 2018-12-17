@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #d1{
+            color: red;
+        }
+        .c1{
+            border:1px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <h1 id='cao'>一级标题</h1>
+    <button onclick="addAttribute()">添加id</button>
+    <button onclick="addAttribute()">添加class</button>
+    <button onclick='getAttr()'>获取属性值</button>
+    <button onclick='removeAttr()'>移除属性</button>
+    <script>
+        //获取元素节点
+        var h1 = document.getElementsByTagName('h1')[0];
+        // function addAttribute(){
+        //     h1.setAttribute('id','d1')
+        //     h1.setAttribute('class','c1')
+        // }
+        // function removeAttr(){
+        //     h1.removeAttribute('class')
+        //     h1.removeAttribute('id')
+        // }
+        // function getAttr(){
+        //     console.log(h1.getAttribute('id'))
+        // }
+        
+
+        //修改为点语法来修改节点的属性
+        function addAttribute(){
+            h1.id = 'd1';
+            h1.className = 'c1';
+        }
+        function removeAttr(){
+            h1.className = null;
+            h1.id = null;
+        }
+        function getAttr(){
+            console.log(h1.id)
+        }
+        
+    </script>
+</body>
+</html>

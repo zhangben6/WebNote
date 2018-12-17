@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.baidu.com" target='_blank' id='A'>百度</a>;
+    <button id="btn">修改网址为JD</button>;
+    <script>
+        var Aa = document.getElementById('A');
+        var oBtn = document.getElementById('btn');
+        oBtn.onclick = function(){
+            Aa.href = 'https://www.jd.com';
+            Aa.innerText = '京东';
+        }
+    </script>
+</body>
+</html>

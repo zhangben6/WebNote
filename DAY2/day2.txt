@@ -127,8 +127,8 @@
             2.分类
                 1.文本框和密码框 (示例见: 06_form.html)
                     语法:
-                        <input type='text'>
-                        <input type='password'>
+                        < type='text'>
+                        < type='password'>
 
                         属性:
                             1.name:定义控件名称(必填),缺少的话无法提交数据
@@ -138,8 +138,8 @@
                             5.autocomplete : 文本框的自动提示功能,取值on/off
 
                 2.单选钮和复选框
-                    单选:<input type='radio'>
-                    复选:<input type='checkbox'>
+                    单选:< type='radio'>
+                    复选:< type='checkbox'>
 
                     属性:
                         1. name : 设置控件名称,必填
@@ -151,12 +151,12 @@
                         将文本与按钮绑定在一起,点文本与点按钮一致
                         语法:
                             <lable for='male'>
-                            <input id='male'>
+                            < id='male'>
                 3.隐藏域和文件选择框
                     1.隐藏域:对用户不可见,某些服务器需要,但是不需要告知用户的数据,例如用户id,都可以使用隐藏域设置
-                        <input type='hidden' name='uid' value='001'>
+                        < type='hidden' name='uid' value='001'>
                     2.文件选择框:
-                        <input type='file' name='uImg'>
+                        < type='file' name='uImg'>
                         注意:二进制数据传输时必须使用Post提交,必须指定enctype
                 4.下拉菜单:
                     语法:
@@ -170,13 +170,13 @@
                 
                 6.按钮控件
                     1.提交数据:当用户点击时,会将表单中的数据按照指定的方式发送给后台
-                    <input type='submit' value='用于设置按钮的显示文本' 
+                    < type='submit' value='用于设置按钮的显示文本' 
 
                     2.重置按钮:将表单中的数据恢复到初始化状态
-                    <input type='reset' value='显示文本'> 
+                    < type='reset' value='显示文本'> 
 
                     3.普通按钮:需要自定绑定JS事件
-                    <input type='button' value='显示文本'>
+                    < type='button' value='显示文本'>
 
                     注意:提交和重置按钮自带显示文本,普通按钮没有默认显示文本,需要单独指定
 
@@ -184,7 +184,7 @@
                         也可以表示按钮,标签内容就是按钮显示文本
                         注意:
                             1. form表单外使用button标签,就是普通按钮
-                            2. form表单内使用button标签,就相当于<input type='submit'></input>,具有提交功能
+                            2. form表单内使用button标签,就相当于< type='submit'></>,具有提交功能
 
 
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div0{
+            width:600px;
+            height:600px;
+            /* border:1px solid red; */
+            margin:200px  auto;
+        }
+        #div1{
+            width:160px;
+            height:50px;
+            border:1px solid red;
+            margin:30px 0;
+        }
+    </style>
+</head>
+<body> 
+    <div id="div0">
+    <input type="text" placeholder="请输入6-18位字符" id='ipt'>
+    <button id="btn">验证输入</button>
+     <div id="div1"></div>
+    </div>
+    <script>
+        var oIpt = document.getElementById('ipt')
+        var oBtn = document.getElementById('btn')
+        var oDiv = document.getElementById('div1')
+        oBtn.onclick = function(){
+            var data = oIpt.value
+            if(data.length>=6 && data.length<=18){
+                var content = '用户名合法'
+                oDiv.innerHTML = content
+                oDiv.style.color = 'red'
+            }else{
+                var content = '用户名不合法'
+                oDiv.innerHTML = content
+                oDiv.style.color = 'blue'
+            }
+        }
+    </script>
+</body>
+</html>

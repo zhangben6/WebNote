@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class='c1'>隔壁老王</h1>
+    <h1>秃头超哥哥</h1>
+    <h1 class='c1'>王所长(wangwc)</h1>
+    <p id='d1' class='c1 c2'>小泽老师是非常优秀的老师</p>
+    <input type="radio" name='sex' value='male' checked='checked'>男
+    <input type="radio" name='sex' value='female'>女 <br>
+    <button onclick='changeText()'>修改</button><br>
+    <input type="text">
+    <button onclick='getValue()'>获取</button>
+    <script>
+        var h1s = document.getElementsByTagName('h1');
+        var elems = document.getElementsByClassName('c1')
+        var p1 = document.getElementById('d1')
+        var inputs = document.getElementsByName('sex')
+        var int1 = document.getElementById('ipt')
+        var username = document.getElementsByTagName('input')[2];
+        console.log(h1s)
+        console.log(elems)
+        console.log(p1)
+        console.log(inputs)
+        console.log(username)
+
+        function changeText(){
+            var h1 = h1s[0]
+            // h1.innerHTML = "<a href=''>卢本伟牛逼</a>"
+            h1.innerText = "<a href=''>卢本伟牛逼</a>"
+        }
+
+        function getValue(){
+            console.log(username.value)
+        }
+
+    </script>
+</body>
+</html>

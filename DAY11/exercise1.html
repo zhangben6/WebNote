@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #div1{
+            margin: 50px 0;
+            width:200px;
+            height:60px;
+            border:1px solid red;
+            text-align:center;
+        }
+    </style>    
+</head>
+<body>
+    <input type="text" id="ipt">
+    <button id="btn">提交</button>
+    <div id='div1'></div>
+    <script>
+        var oIpt = document.getElementById('ipt') 
+        var oBtn = document.getElementById('btn')
+        var oDiv = document.getElementById('div1')
+        oBtn.onclick = function(){
+            oDiv.innerHTML = '<h1>' + oIpt.value + '</h1>'
+        }
+    </script>
+</body>
+</html>

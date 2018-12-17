@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style='color:red;background-color: green;text-align:center;'>一级标题</h1>
+    <p>这是自定义的文本</p>
+    <script>
+        //1.获取元素节点
+        var h1 = document.getElementsByTagName('h1')[0];
+        console.log(h1.style)
+        var p = document.getElementsByTagName('p')[0];
+        p.style = 'width:500px;height:200px;text-align:center;line-height:200px;border:1px solid red;color:blue;background-color:green;margin:0 auto;'
+
+    </script>
+</body>
+</html>
