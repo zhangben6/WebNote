@@ -2,6 +2,7 @@
     1.Array
         length
         join() reverse() push() pop() unshift() shift() toString()  sort() forEach(function(elem,index){})
+
     2.toString  
         length 按下标存取元素
         1.toUpperCase() toLowerCase()
@@ -14,6 +15,7 @@
         6.指定内容的查找和替换
             match(substr/regExp) 返回值是数组
             replace(substring/regExp,new content) 返回替换后的新字符串
+            
     3.RegExp    
         1. /知乎/g   
         /\W{2}/ig
