@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-nanshen.js"></script>
+</head>
+
+<body>
+    <p id='d1' class="c1">床前明月光</p>
+    <p class='c2'>地上鞋两双</p>
+    <p class="c1">天王盖地虎</p>
+    <p>小鸡炖蘑菇</p>
+    <hr>
+    <p id='d1' class="c1">床前明月光</p>
+    <p class='c2'>地上鞋两双</p>
+    <p class="c1">天王盖地虎</p>
+    <p>小鸡炖蘑菇</p>
+    <div>
+        <p>一如糗百深似海</p>
+    </div>
+
+    <button onclick='first()'>:first</button>
+    <button onclick='last()'>:last</button>
+    <button onclick='odd()'>:odd</button>
+    <button onclick='even()'>:even</button>
+    <button onclick='eq()'>:eq</button>
+    <button onclick='lt()'>:lt</button>
+    <button onclick='gt()'>:gt</button>
+    <button onclick='not()'>:not</button>
+
+    <script>
+        function first() {
+            $('p:first').css('color', 'red');
+        }
+        function last() {
+            $('p:last').css('color', 'green');
+        }
+        function odd() {
+            $('p:odd').css('background', 'orange')
+        }
+        function even() {
+            $('p:even').css('background', 'pink')
+        }
+        function eq() {
+            $('p:eq(5)').css('color', 'blue');
+        } function lt() {
+            $('p:lt(5)').css('color', 'grey');
+        }
+        function gt() {
+            $('p:gt(5)').css('color', 'yellow');
+        }
+        function not(){
+            // $(':not(p,div)').css('border','3px solid red')
+            $('p:not(.c1)').css('border','3px solid red')
+        }        
+        
+    </script>
+</body>
+
+</html>

@@ -12,10 +12,46 @@
     <div></div>
     <div></div>
     <script>
-        console.log($('div'));
+        console.log($('div')[0]);
+
+        //获取原生的JS对象
         var div = document.getElementsByTagName('div')[0];
-        //转换jquery对象
+
+        //转换jquery对象(变量名使用$前缀)
         var $div = $(div);
+
+        //两者的比较
+        console.log(div);
+        console.log($div);
+
+        //jq对象转原生JS对象
+        console.log($div[0]);
+        console.log($div.get(0));
+
+        //操作元素的内容
+        div.innerHTML = '原生innerHTML书写';
+
+        //原生的JS调用方法
+        div.setAttribute('id','d1');
+        
+        //jquery操作元素内容和属性
+        $('div').html('jquery 动态添加');
+        $('div').attr('class','c1');
+
+
+
+
+        /* 
+
+        //jquery调用对象不存在的方法会报错
+        $('div').setAttribute('id','d1')
+
+        不起作用,不报错,访问对象不存在的属性
+        $('div').innerHTML = 'JQ';
+
+        */
+
+
     </script>
 </body>
 </html>

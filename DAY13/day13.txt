@@ -38,4 +38,144 @@ JQuery
         练习:
             创建div/h1标签
             通过$('selector')获取元素并输出
+
+    4.jquery对象与dom对象互相转换
+        1.DOM转Jquery
+            通过$()封装JS对象,返回jquery对象
+            注:
+                jquery对象使用$前缀,与原生对象区分
+        2.jquery转DOM
+            从jquery数组中取元素
+            var div = $div[0];
+            var div2 = $div.get(0);
+4.选择器
+    1.$()中可以接收选择器名称作为参数,匹配并返回元素对象,返回值是一个包含若干jquery
+    对象的数组.
+        语法: $('selector');  
+    2.选择器
+        1.基础选择器
+            id class tagName group children
+            语法:
+                1. $('#id')
+                2. $('.className')
+                3. $('tagName')
+                4. $('selector1,selector2')
+        2.层级选择器
+            1.后代选择器
+                $('seletor1 selector2') 包含直接与间接子元素                
+            2.子代选择器
+                $('selector1>selector2') 匹配直接子元素
+            3.相邻兄弟选择器
+                $('selector1+selector2') 匹配下一个兄弟元素,满足select2则返回,否则匹配失败
+            4.通用兄弟选择器
+                $('selector1~selector2') 匹配selector1后面所有满足selector2的兄弟元素
+
+        3.过滤选择器
+            需要结合其他选择器使用
+                1. :first
+                    匹配第一个元素
+                    例: $('p:first') 匹配第一个p元素
+                2. :last
+                    匹配最后一个元素    
+                3. :odd
+                    匹配偶数行对应的元素
+                4. :even
+                    匹配奇数行对应的元素
+                5. :eq(index)
+                    匹配下标为index的元素
+                6. :lt(index)
+                    匹配下标小于index
+                7. :gt(index)
+                    匹配下标大于index的元素
+                8. :not('selector1,selector2')
+                    表示除了制定选择器以外剩余的元素
+        
+        4.属性选择器
+            1. [attributeName]
+                匹配包含制定属性的元素
+            2. [attrName=value]
+                匹配属性名等于指定属性值的元素
+            3. [attrName^value]
+                匹配属性值以指定字符开头的元素
+            4. [attrName$=value]
+                匹配属性值以指定字符结尾的元素
+            5. [attrName*=value]
+                匹配属性值中包含指定字符的元素
+            6. [attrName!=value]
+                匹配属性名不等于属性值的元素
+
+        5.子元素过滤选择器
+            1. :first-child
+                匹配第一个子元素
+            2. :last-child
+                匹配最后一个子元素
+            3.nth-child
+                匹配第n个子元素
+
+5.jquery DOM操作
+    1.操作元素内容
+        html('')
+            设置读取标签内容,可以识别标签语法,类似于原生JS中innerHTML
+        text('')
+            设置读取标签内容,不能识别标签语法,类似于innerText
+        val('')
+            设置或读取表单控件的值,类似于原生value属性
+        练习:
+            创建文本框按钮div,要求点击按钮时,将文本框的输入的内容以一级标题的形式显示在div中
+    2.操作标签属性
+        1.attr('attrName','value')
+            console.log($('div').attr('id))
+        2.prop('attrName','value')
+            property 设置或读取标签属性
+            区分:
+                attr()和prop()方法几乎一致,都表示属性操作,但是对于这两行代码:
+                 console.log($('input').attr('checked')) //checked='checked'
+                 console.log($('input').prop('checked')) //checked='true'
+        3.removeAttr('attrName')
+            移除指定属性
+    3.操作元素样式
+        1.attr()/prop()
+            为元素添加id/class属性,对应选择器样式
+        2.操作类选择器
+            通过class属性值,结合选择器,修改样式
+                1.addClass('className')
+                    为元素添加属性值,可以反复调用,反复添加
+                2.removeClass('className');
+                    移除指定的class属性值,省略参数表示清空class属性值
+                3.toggleClass('className')
+                    结合用户行为实现元素的样式切换;
+                    元素存在指定className,就删除;
+                    不存在,则添加;
+        3.操作行内样式
+            1. css('color')
+                获取指定的CSS属性值
+            2. css('color','red')
+                设置元素样式
+            3. css(JSON对象)
+                {"name":"zhangben"}
+                JSON对象:指定数据传输格式
+                使用:
+                    1.使用花括号表示JSON对象
+                    2.CSS属性名和属性值之间使用:隔开
+                    3.属性名与属性值之间
             
+
+
+            练习:
+                创建DIV.文本内容不限
+                使用css()设置:
+                    200*200
+                    背景色和文本色自定义
+                    文本水平和垂直居中
+                    元素居中
+                    
+
+        
+
+
+
+
+
+        
+
+

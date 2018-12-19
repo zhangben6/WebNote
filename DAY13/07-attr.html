@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-nanshen.js"></script>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <input type="radio" value='male' checked>
+    <script>
+        $('h1').attr('id','d1')
+        $('h1').prop('class','c1');
+        console.log($('input').attr('checked'))
+        console.log($('input').prop('checked'))
+        
+        $('h1').removeAttr('id')
+    </script>
+</body>
+</html>

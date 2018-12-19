@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-1.11.3.js"></script>
+    <style>
+            #d1{
+                color:red;
+            }
+            .c1{
+                color:blue;
+            }
+            .c2{
+                background: grey;
+            }
+    </style>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <p>段落</p>
+    <h2>二级标题</h2>
+    <span>span文本</span>
+    <button onclick=toggleStyle()>toggleClass</button>
+    <script>
+        $('h1').attr('id','d1');
+        // $('p').prop('class','c1');
+        $('p').prop('class','c1 c2');
+        
+        $('h2').addClass('c1')
+        $('h2').addClass('c2')
+
+        $('span').addClass('c1').addClass('c2')
+        $('class').addClass('c1 c2');
+
+        $('span').removeClass('c1')
+        $('h2').removeClass()
+        
+        function toggleStyle(){
+            $('h2').toggleClass('c1');
+            
+
+        }
+        $('div').css({
+            'width':'200px',
+            'height':'200px',
+            'background':'red',
+            'text-align':'center',
+            'line-height':'200px',
+            'margin':'0 auto'
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-nanshen.js"></script>
+</head>
+<body>
+    <div id="box">
+        <h1>名古诗两首</h1>
+        <p id='d1' class="c1">床前明月光</p>
+        <p class='c2'>地上鞋两双</p>
+        <p class="c1">天王盖地虎</p>
+        <p>小鸡炖蘑菇</p>
+    </div>
+    <script>
+        //获取元素
+        console.log($('p'))
+        $('#d1').css('color','red')
+        $('.c1').css('fontSize','40px')
+        //群组选择器
+        $('h1,.c1').css('text-align','center')
+        //相邻兄弟选择器
+        $('#d1+p').css('background-color','orange')
+        $('.c2~p').css('border','1px solid red')
+    </script>
+</body>
+</html>
+  
