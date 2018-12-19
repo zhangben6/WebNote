@@ -4,3 +4,38 @@ DOM
     getElementByTagName/className/Name()
     getElementById()
 2.操作节点对象的属性和样式
+
+00-review.html
+
+JQuery
+1.介绍:
+    JQuery是JAVAScript工具库,封装了一套定义好的方法,简化JS的操作(把底层东西的函数代码进行封装)
+    版本:
+        1. 早期的版本(1.x)xx.xx 包括IE6,7,8的兼容
+        2. 目前的版本(2.x)xx.xx 不再兼容IE6,7,8 
+2.功能和优势:
+    1.简化DOM操作,简化样式操作
+    2.JQuery中可以通过选择器直接获取元素和操作样式
+    3.简化事件处理
+    4.Ajax技术更加简便和完善
+    5.提供大量的特效或功能插件
+    6.允许自定义插件
+3.使用:
+    1.引入jqury
+        <script src=''></script>
+        注意:引入操作必须在自定义的JS代码之前,否则无法使用JQery语法
+    2.JQuery 对象
+        对原生JS对象进行封装之后,称为JQuery对象
+        原生对象调用原生方法
+        jqruy对象使用jqery提供的方法,不能混用
+    3.工厂函数 - $()
+        用来获取元素对象(节点),通过传递参数执行获取,参数为字符串,传入选择器名称/DOM对象
+        选择器:
+            'h1'
+            '#d1'
+            '.c1'
+            'div h1'
+        练习:
+            创建div/h1标签
+            通过$('selector')获取元素并输出
+            

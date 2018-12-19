@@ -60,10 +60,10 @@ DOM
                 parrentNode.insertBefore(newNode,oldNode);
                 在已有节点(oldNode)之前插入新的节点(newNode)
             注意:节点对象不能复用,页面中想出现几个节点,JS中需要动态创建几个节点,一一对应
-            
+
         3.删除节点
             语法:
-                parrentNode.removeChild(node);
+                parentNode.removeChild(node);
                 从父元素中移除指定节点对象
     
         练习:
@@ -161,6 +161,9 @@ DOM
                         获取当前按键字符的ASC码
                     2.key
                         获取字符
+                3.onkeyup : 按键抬起时触发 (用法和使用场景和onkeydown相同)
+
+
                     
 
 

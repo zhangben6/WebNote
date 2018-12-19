@@ -16,6 +16,7 @@
     </style>
     <script src="./index.js"></script>
     <script>
+
         window.onload = function () {
             $('h1').onclick = function (ev) {
                 console.log(ev)
@@ -23,9 +24,13 @@
                 console.log('clientX:',ev.clientX,'clientY:',ev.clientY)
                 console.log('screenX:',ev.screenX,'screenY:',ev.screenY)
             }
+
+
             onkeydown = function(ev){
                 console.log('keydown:',ev.which)
             }
+
+            //keypress只有在按下字符后才能触发
             onkeypress = function(ev){
                 console.log('keypress:',ev.which,ev.key)
             }
