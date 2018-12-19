@@ -1,0 +1,6 @@
+复习:
+DOM
+1.获取元素节点
+    getElementByTagName/className/Name()
+    getElementById()
+2.操作节点对象的属性和样式
