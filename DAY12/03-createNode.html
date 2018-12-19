@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        table,td{
+            border:1px solid black;
+            td{
+                width:150px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <input type="text" name='gname' placeholder="商品名称">
+        <input type="text" name='gprice' placeholder="商品价格">
+        <input type="text" name='gcount' placeholder="商品数量">
+        <input type="button" value='添加' onclick='addGoods()'>
+    </p>
+    <table>
+        <tbody>
+            <tr>
+                <td>商品名称</td>
+                <td>商品价格</td>
+                <td>商品数量</td>
+                <td>操作</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <script>
+        function addGoods() {
+            //1.获取输入框的内容
+            var oName = document.getElementsByName('gname')[0];
+            var oPrice = document.getElementsByName('gprice')[0];
+            var oCount = document.getElementsByName('gcount')[0];
+            var oTbody = document.getElementsByTagName('tbody')[0];
+            var gname = oName.value;
+            var gprice = oPrice.value;
+            var gcount = oCount.value;
+            //2.按照表格结构创建行和单元格,填充内容
+            var tr = document.createElement('tr');
+            var tdName = document.createElement('td');
+            tdName.innerHTML = gname;
+            var tdPrice = document.createElement('td')
+            tdPrice.innerHTML = gprice;
+            var tdCount = document.createElement('td')
+            tdCount.innerHTML = gcount;
+            var tdOperation = document.createElement('td');
+            
+            //创建操作按钮字段(两种方法)
+            var btnUpdate = document.createElement('button');
+            btnUpdate.innerHTML = '修改';
+            var btnDelete = document.createElement('input');
+            btnDelete.type = 'button';
+            btnDelete.value = '删除';
+            tdOperation.appendChild(btnUpdate);
+            tdOperation.appendChild(btnDelete);
+
+            //3.添加显示
+            tr.appendChild(tdName);
+            tr.appendChild(tdPrice);
+            tr.appendChild(tdCount);
+            tr.appendChild(tdOperation);
+            oTbody.appendChild(tr);
+        }
+    </script>
+</body>
+
+</html>

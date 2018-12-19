@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <h1>一级标题</h1>
+    <form action="login" method='get' enctype="application/x-www-form-urlencoded">
+        <input type="text" name='uname'>
+        <input type="submit" value='注册'>
+    </form>
+    <script>
+        window.onload = function () {
+            console.log($('h1'));
+            var form = $('form');
+            var uname = $('input')
+            uname.onfocus = function () {
+                console.log('获取焦点')
+            }
+            uname.onblur = function () {
+                console.log('失去焦点')
+            }
+            // uname.oninput = function(){
+            //     //this 指代当前函数或者方法的调用者
+            //     console.log(this.value)
+            // }
+            uname.onchange = function () {
+                console.log('onchange:', this.value)
+            }
+
+            //点击提交按钮时自动触发
+            form.onsubmit = function () {
+                if(uname.value.length==0){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

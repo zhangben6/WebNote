@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1{
+            width:200px;
+            height:200px;
+            background-color: blue;
+            cursor:default;
+        }
+    </style>
+    <script src="./index.js"></script>
+    <script>
+        window.onload = function () {
+            $('h1').onclick = function (ev) {
+                console.log(ev)
+                console.log('offsetX:',ev.offsetX,'offsetY:',ev.offsetY);
+                console.log('clientX:',ev.clientX,'clientY:',ev.clientY)
+                console.log('screenX:',ev.screenX,'screenY:',ev.screenY)
+            }
+            onkeydown = function(ev){
+                console.log('keydown:',ev.which)
+            }
+            onkeypress = function(ev){
+                console.log('keypress:',ev.which,ev.key)
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>一级标题</h1>
+
+</body>
+
+</html>
