@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../DAY13/jquery-1.11.3.js"></script>
+</head>
+<body>
+   <div id="box">
+       <h1 class='c1'>BOX中的h1</h1>
+       <div class="left">
+           <h1>一级标题</h1>
+           <p>段落内容</p>
+       </div>
+       <a href="">超链接</a>
+   </div>
+   <script>
+
+       //获取父元素
+        console.log($('h1').parent());
+        console.log($('h1').parents('#box'))
+
+       //获取子元素
+        console.log($('#box').children())
+        console.log($('.left').children('p'))
+
+        //获取后代元素
+        console.log($('#box').find())
+
+        //获取兄弟元素
+        console.log('---------------------------------------------------------------------------------')
+        console.log($('.c1').next())
+        console.log($('a').prev())    //div.left
+        console.log($('a').prev('.c1'))  
+        console.log($('.left').siblings())
+        //在兄弟元素中进一步查找
+        console.log($('.left').siblings())
+
+        
+   </script>
+</body>
+</html>

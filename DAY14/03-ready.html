@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../DAY13/jquery-1.11.3.js"></script>
+    
+</head>
+<body>
+    <h1>一级标题</h1>
+    <p style='border:1px solid red;'>段落内容</p>
+    <script>
+            // $(document).ready(function(){
+            //     alert('第一次弹框')
+            // });
+            // $().ready(function(){
+            //     alert('第二次弹框')
+            // })
+            // $(function(){
+            //     alert('第三次弹框')
+            // })
+            function show (){
+                alert('show')
+            }
+            $('h1').bind('click',show)
+            $('p').click(function(evt){
+                alert('pppp')
+                console.log(evt)
+            })
+        </script>
+</body>
+</html>

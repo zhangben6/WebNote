@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../DAY13/jquery-1.11.3.js"></script>
+
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+        var arr = [123,43,34,2,3,4,24,324,35]
+        $(arr).each(function(index,elem){
+            //遍历数组时,传入两个数据,分别表示下标和元素
+            console.log(elem,index);
+        })
+        $(function(){
+            $('p').each(function(){
+                // 获取当前的节点对象
+                console.log(this)
+                //什么类型的对象调用什么样的方法
+                $(this).html()
+                                                                                                                                                                 });
+        });
+    </script>
+</body>
+</html>

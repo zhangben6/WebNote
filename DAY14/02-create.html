@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../DAY13/jquery-nanshen.js"></script>
+</head>
+<body>
+    <script>
+        var $h1 = $("<h1 id='d1' style='color:red;'>一级标题</h1>")
+        var $p = $("<p></p>")
+        $p.html("段落标签").attr('class','c1').css("color","green")
+        console.log($h1,$p)
+
+        //添加body中显示
+        $('body').append($h1)
+        $('body').prepend($p)
+
+        var $span = $("<span>普通文本</span>")
+        var $a = $("<a href=''>超链接</a>")
+        $p.before($span);
+        $p.after($a)
+        
+        
+    </script>
+</body>
+</html>
