@@ -206,6 +206,7 @@ a:hover{
 #main p.action{
     width:85px;
     text-align: center;
+    cursor: pointer;
 
 }
 
